@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4224547A-4CDB-4741-AC83-ABB18565CB16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClarisSystemWeb</RootNamespace>
+    <AssemblyName>ClarisSystemWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Consulta\ConsultaUsuarios.aspx" />
+    <Content Include="images\trash.png" />
+    <Content Include="Productos.aspx" />
+    <Content Include="Consulta\ConsultaClientes.aspx" />
+    <Content Include="Consulta\ConsultaDeliverys.aspx" />
+    <Content Include="Consulta\ConsultaEntregas.aspx" />
+    <Content Include="Consulta\ConsultaPedidos.aspx" />
+    <Content Include="Consulta\ConsultaProductos.aspx" />
+    <Content Include="css\ie6.css" />
+    <Content Include="css\ie7.css" />
+    <Content Include="css\ie9.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Fotos de Productos\Caribaslays.png" />
+    <Content Include="Fotos de Productos\doñagallinatomate.png" />
+    <Content Include="Fotos de Productos\fitnessfruits.png" />
+    <Content Include="Fotos de Productos\guandulesverdesgoya.png" />
+    <Content Include="Fotos de Productos\LecheEvaporadajaja.png" />
+    <Content Include="Fotos de Productos\Maltaindia.png" />
+    <Content Include="images\baking-fruits.jpg" />
+    <Content Include="images\beautiful-girl.jpg" />
+    <Content Include="images\bg-copyright.gif" />
+    <Content Include="images\bg-footer.jpg" />
+    <Content Include="images\bg-footer2.gif" />
+    <Content Include="images\bg-header.gif" />
+    <Content Include="images\bg-navigation.gif" />
+    <Content Include="images\border-dashed.gif" />
+    <Content Include="images\freshly-picked.jpg" />
+    <Content Include="images\fruit-desserts.jpg" />
+    <Content Include="images\fruit-recipes.jpg" />
+    <Content Include="images\health-benefits.jpg" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\logoclaris.jpg" />
+    <Content Include="images\pastries.jpg" />
+    <Content Include="images\separator.gif" />
+    <Content Include="images\sprites-icons.gif" />
+    <Content Include="images\strawberry-creme-tart.jpg" />
+    <Content Include="images\strawberry-pastry.jpg" />
+    <Content Include="images\strawberry-tart.jpg" />
+    <Content Include="images\vegetables.jpg" />
+    <Content Include="images\vitamins.jpg" />
+    <Content Include="Carrito.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Registro\RegistroClientes.aspx" />
+    <Content Include="Registro\RegistroDeliverys.aspx" />
+    <Content Include="Registro\RegistroEntregas.aspx" />
+    <Content Include="Registro\RegistroPedidos.aspx" />
+    <Content Include="Registro\RegistroProductos.aspx" />
+    <Content Include="Registro\RegistroUsuarios.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consulta\ConsultaUsuarios.aspx.cs">
+      <DependentUpon>ConsultaUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaUsuarios.aspx.designer.cs">
+      <DependentUpon>ConsultaUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\ConsultaClientes.aspx.cs">
+      <DependentUpon>ConsultaClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaClientes.aspx.designer.cs">
+      <DependentUpon>ConsultaClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\ConsultaDeliverys.aspx.cs">
+      <DependentUpon>ConsultaDeliverys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaDeliverys.aspx.designer.cs">
+      <DependentUpon>ConsultaDeliverys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\ConsultaEntregas.aspx.cs">
+      <DependentUpon>ConsultaEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaEntregas.aspx.designer.cs">
+      <DependentUpon>ConsultaEntregas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\ConsultaPedidos.aspx.cs">
+      <DependentUpon>ConsultaPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaPedidos.aspx.designer.cs">
+      <DependentUpon>ConsultaPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Consulta\ConsultaProductos.aspx.cs">
+      <DependentUpon>ConsultaProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaProductos.aspx.designer.cs">
+      <DependentUpon>ConsultaProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaPrincipal.Master.cs">
+      <DependentUpon>PaginaPrincipal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaPrincipal.Master.designer.cs">
+      <DependentUpon>PaginaPrincipal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroClientes.aspx.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroClientes.aspx.designer.cs">
+      <DependentUpon>RegistroClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroDeliverys.aspx.cs">
+      <DependentUpon>RegistroDeliverys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroDeliverys.aspx.designer.cs">
+      <DependentUpon>RegistroDeliverys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroEntregas.aspx.cs">
+      <DependentUpon>RegistroEntregas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroEntregas.aspx.designer.cs">
+      <DependentUpon>RegistroEntregas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroPedidos.aspx.cs">
+      <DependentUpon>RegistroPedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroPedidos.aspx.designer.cs">
+      <DependentUpon>RegistroPedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroProductos.aspx.cs">
+      <DependentUpon>RegistroProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroProductos.aspx.designer.cs">
+      <DependentUpon>RegistroProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\RegistroUsuarios.aspx.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroUsuarios.aspx.designer.cs">
+      <DependentUpon>RegistroUsuarios.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="healthylifetemplate.psd" />
+    <Content Include="images\Thumbs.db" />
+    <Content Include="PaginaPrincipal.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{c8e5ee23-d864-43a3-8f9e-4ca9c2b75fc3}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60933</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60933/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

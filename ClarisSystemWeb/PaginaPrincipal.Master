@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaPrincipal.master.cs" Inherits="ClarisSystemWeb.PaginaPrincipal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--[if IE 9]>
+		<link rel="stylesheet" type="text/css" href="css/ie9.css" />
+	<![endif]-->
+    <!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="css/ie7.css" />
+	<![endif]-->
+    <!--[if IE 6]>
+		<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+	<![endif]-->
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .auto-style2 {
+            width: 267px;
+        }
+
+        .auto-style8 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+            <div style="float:right;">
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </div>
+            <div id="header">
+                <div style="font-weight: 700">
+                    &nbsp;
+                </div>
+                <ul>
+                    <li class="first current"><a href="/Default.aspx" style="font-family: georgia, 'Times New Roman', Times, serif; font-size: 20px; color: #993300; text-decoration: underline;">Inicio</a></li>
+                    <li style="border-style: inset"><a href="/Productos.aspx" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px; color: #993300; text-decoration: underline;">Productos</a></li>
+                    <li><a href=" /Consulta/ConsultaClientes.aspx" style="font-family: georgia, 'Times New Roman', Times, serif; font-size: 20px; text-decoration: underline; color: #993300;">Contactos</a></li>
+                    <li><a href=" /Carrito.aspx" style="font-family: georgia, 'Times New Roman', Times, serif; font-size: 20px; text-decoration: underline; color: #993300;">Carrito</a></li>
+                    <li>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+
+
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style2">
+                            <% if (Session["NivelUsuario"] != null)
+                               {
+
+                                   if (Session["NivelUsuario"].ToString() == "0")
+                                   {
+                            %>
+                            <asp:Panel ID="menuPanel" runat="server" BackColor="#CCFFFF" Height="346px" Width="254px">
+                                <table class="auto-style8">
+                                    <tr>
+                                        <td style="background-color: #FF0066; font-family: georgia, 'Times New Roman', Times, serif; font-size: 22px; color: #000000;">Registros</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="registroclientesHyperLink1" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Registro/RegistroClientes.aspx">Registro Clientes</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="registrodeliverysHyperLink2" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Registro/RegistroDeliverys.aspx">Registro Deliverys</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="registroproductosHyperLink2" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Registro/RegistroProductos.aspx">Registro Productos</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="registropedidosHyperLink2" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Registro/RegistroPedidos.aspx">Registro Pedidos</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="registroentregasHyperLink2" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Registro/RegistroEntregas.aspx">Registro Entregas</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="registroUsuariosHyperLink3" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Registro/RegistroUsuarios.aspx">Registro Usuarios</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-family: georgia, 'Times New Roman', Times, serif; font-size: 22px; color: #000000; background-color: #FF0066">Consultas</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="consultaclientesHyperLink0" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Consulta/ConsultaClientes.aspx">Consulta Clientes</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="consultadeliverysHyperLink1" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Consulta/ConsultaDeliverys.aspx">Consulta Deliverys</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="consultaproductosHyperLink1" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Consulta/ConsultaProductos.aspx">Consulta Productos</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="consultapedidosHyperLink1" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Consulta/ConsultaPedidos.aspx">Consulta Pedidos</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="consultaentregasHyperLink1" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Consulta/ConsultaEntregas.aspx">Consulta Entregas</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:HyperLink ID="consultaUsuariosHyperLink2" runat="server" Font-Bold="False" Font-Size="Medium" NavigateUrl="~/Consulta/ConsultaUsuarios.aspx">Consulta Usuarios</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </asp:Panel>
+                            <%}
+                               }
+                               else
+                               {
+                                   FormsAuthentication.RedirectToLoginPage();
+                               } %>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+            <div id="footer">
+                <div>
+                    <div>
+                        <ul>
+                            <li>&nbsp;<h2><a href="index.html">Mision</a></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet... <a class="more" href="index.html">Read more</a></p>
+                            </li>
+                            <li>&nbsp;<h2><a href="index.html">Vision</a></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet... <a class="more" href="index.html">Read more</a></p>
+                            </li>
+                            <li>&nbsp;<h2><a href="index.html">Valores</a></h2>
+                                <p>Honestidad, Eficiencia, Responsabilidad,Excelente </p>
+                                <p>servicio <a class="more" href="index.html">Read more</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="footnote">&copy; 2011 Healthy Life. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
